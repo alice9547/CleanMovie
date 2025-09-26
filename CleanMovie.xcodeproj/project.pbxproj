@@ -24,38 +24,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C6233F9C2E8511DB0018C2BF /* CleanArchitecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanArchitecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6233FB22E8511DE0018C2BF /* CleanArchitectureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6233FBC2E8511DE0018C2BF /* CleanArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6233F9C2E8511DB0018C2BF /* CleanMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6233FB22E8511DE0018C2BF /* CleanMovieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMovieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6233FBC2E8511DE0018C2BF /* CleanMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CleanMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C6233FC42E8511DE0018C2BF /* Exceptions for "CleanArchitecture" folder in "CleanArchitecture" target */ = {
+		C6233FC42E8511DE0018C2BF /* Exceptions for "CleanMovie" folder in "CleanMovie" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = C6233F9B2E8511DB0018C2BF /* CleanArchitecture */;
+			target = C6233F9B2E8511DB0018C2BF /* CleanMovie */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C6233F9E2E8511DB0018C2BF /* CleanArchitecture */ = {
+		C6233F9E2E8511DB0018C2BF /* CleanMovie */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				C6233FC42E8511DE0018C2BF /* Exceptions for "CleanArchitecture" folder in "CleanArchitecture" target */,
+				C6233FC42E8511DE0018C2BF /* Exceptions for "CleanMovie" folder in "CleanMovie" target */,
 			);
-			path = CleanArchitecture;
+			path = CleanMovie;
 			sourceTree = "<group>";
 		};
-		C6233FB52E8511DE0018C2BF /* CleanArchitectureTests */ = {
+		C6233FB52E8511DE0018C2BF /* CleanMovieTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CleanArchitectureTests;
+			path = CleanMovieTests;
 			sourceTree = "<group>";
 		};
-		C6233FBF2E8511DE0018C2BF /* CleanArchitectureUITests */ = {
+		C6233FBF2E8511DE0018C2BF /* CleanMovieUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CleanArchitectureUITests;
+			path = CleanMovieUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -88,9 +88,9 @@
 		C6233F932E8511DB0018C2BF = {
 			isa = PBXGroup;
 			children = (
-				C6233F9E2E8511DB0018C2BF /* CleanArchitecture */,
-				C6233FB52E8511DE0018C2BF /* CleanArchitectureTests */,
-				C6233FBF2E8511DE0018C2BF /* CleanArchitectureUITests */,
+				C6233F9E2E8511DB0018C2BF /* CleanMovie */,
+				C6233FB52E8511DE0018C2BF /* CleanMovieTests */,
+				C6233FBF2E8511DE0018C2BF /* CleanMovieUITests */,
 				C6233F9D2E8511DB0018C2BF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 		C6233F9D2E8511DB0018C2BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6233F9C2E8511DB0018C2BF /* CleanArchitecture.app */,
-				C6233FB22E8511DE0018C2BF /* CleanArchitectureTests.xctest */,
-				C6233FBC2E8511DE0018C2BF /* CleanArchitectureUITests.xctest */,
+				C6233F9C2E8511DB0018C2BF /* CleanMovie.app */,
+				C6233FB22E8511DE0018C2BF /* CleanMovieTests.xctest */,
+				C6233FBC2E8511DE0018C2BF /* CleanMovieUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,9 +108,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C6233F9B2E8511DB0018C2BF /* CleanArchitecture */ = {
+		C6233F9B2E8511DB0018C2BF /* CleanMovie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6233FC52E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanArchitecture" */;
+			buildConfigurationList = C6233FC52E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanMovie" */;
 			buildPhases = (
 				C6233F982E8511DB0018C2BF /* Sources */,
 				C6233F992E8511DB0018C2BF /* Frameworks */,
@@ -121,18 +121,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C6233F9E2E8511DB0018C2BF /* CleanArchitecture */,
+				C6233F9E2E8511DB0018C2BF /* CleanMovie */,
 			);
-			name = CleanArchitecture;
+			name = CleanMovie;
 			packageProductDependencies = (
 			);
 			productName = CleanArchitecture;
-			productReference = C6233F9C2E8511DB0018C2BF /* CleanArchitecture.app */;
+			productReference = C6233F9C2E8511DB0018C2BF /* CleanMovie.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C6233FB12E8511DE0018C2BF /* CleanArchitectureTests */ = {
+		C6233FB12E8511DE0018C2BF /* CleanMovieTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6233FCA2E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanArchitectureTests" */;
+			buildConfigurationList = C6233FCA2E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanMovieTests" */;
 			buildPhases = (
 				C6233FAE2E8511DE0018C2BF /* Sources */,
 				C6233FAF2E8511DE0018C2BF /* Frameworks */,
@@ -144,18 +144,18 @@
 				C6233FB42E8511DE0018C2BF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				C6233FB52E8511DE0018C2BF /* CleanArchitectureTests */,
+				C6233FB52E8511DE0018C2BF /* CleanMovieTests */,
 			);
-			name = CleanArchitectureTests;
+			name = CleanMovieTests;
 			packageProductDependencies = (
 			);
 			productName = CleanArchitectureTests;
-			productReference = C6233FB22E8511DE0018C2BF /* CleanArchitectureTests.xctest */;
+			productReference = C6233FB22E8511DE0018C2BF /* CleanMovieTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C6233FBB2E8511DE0018C2BF /* CleanArchitectureUITests */ = {
+		C6233FBB2E8511DE0018C2BF /* CleanMovieUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6233FCD2E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanArchitectureUITests" */;
+			buildConfigurationList = C6233FCD2E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanMovieUITests" */;
 			buildPhases = (
 				C6233FB82E8511DE0018C2BF /* Sources */,
 				C6233FB92E8511DE0018C2BF /* Frameworks */,
@@ -167,13 +167,13 @@
 				C6233FBE2E8511DE0018C2BF /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				C6233FBF2E8511DE0018C2BF /* CleanArchitectureUITests */,
+				C6233FBF2E8511DE0018C2BF /* CleanMovieUITests */,
 			);
-			name = CleanArchitectureUITests;
+			name = CleanMovieUITests;
 			packageProductDependencies = (
 			);
 			productName = CleanArchitectureUITests;
-			productReference = C6233FBC2E8511DE0018C2BF /* CleanArchitectureUITests.xctest */;
+			productReference = C6233FBC2E8511DE0018C2BF /* CleanMovieUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C6233F972E8511DB0018C2BF /* Build configuration list for PBXProject "CleanArchitecture" */;
+			buildConfigurationList = C6233F972E8511DB0018C2BF /* Build configuration list for PBXProject "CleanMovie" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -213,9 +213,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C6233F9B2E8511DB0018C2BF /* CleanArchitecture */,
-				C6233FB12E8511DE0018C2BF /* CleanArchitectureTests */,
-				C6233FBB2E8511DE0018C2BF /* CleanArchitectureUITests */,
+				C6233F9B2E8511DB0018C2BF /* CleanMovie */,
+				C6233FB12E8511DE0018C2BF /* CleanMovieTests */,
+				C6233FBB2E8511DE0018C2BF /* CleanMovieUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,12 +271,12 @@
 /* Begin PBXTargetDependency section */
 		C6233FB42E8511DE0018C2BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C6233F9B2E8511DB0018C2BF /* CleanArchitecture */;
+			target = C6233F9B2E8511DB0018C2BF /* CleanMovie */;
 			targetProxy = C6233FB32E8511DE0018C2BF /* PBXContainerItemProxy */;
 		};
 		C6233FBE2E8511DE0018C2BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C6233F9B2E8511DB0018C2BF /* CleanArchitecture */;
+			target = C6233F9B2E8511DB0018C2BF /* CleanMovie */;
 			targetProxy = C6233FBD2E8511DE0018C2BF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -291,7 +291,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P28M74SH4G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CleanArchitecture/Info.plist;
+				INFOPLIST_FILE = CleanMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,7 +302,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.quantec.im.CleanArchitecture;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quantec.im.CleanMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -319,7 +319,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P28M74SH4G;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CleanArchitecture/Info.plist;
+				INFOPLIST_FILE = CleanMovie/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,7 +330,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.quantec.im.CleanArchitecture;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quantec.im.CleanMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -472,7 +472,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanArchitecture.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CleanArchitecture";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanMovie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CleanMovie";
 			};
 			name = Debug;
 		};
@@ -491,7 +491,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanArchitecture.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CleanArchitecture";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CleanMovie.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CleanMovie";
 			};
 			name = Release;
 		};
@@ -532,7 +532,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C6233F972E8511DB0018C2BF /* Build configuration list for PBXProject "CleanArchitecture" */ = {
+		C6233F972E8511DB0018C2BF /* Build configuration list for PBXProject "CleanMovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6233FC82E8511DE0018C2BF /* Debug */,
@@ -541,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6233FC52E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanArchitecture" */ = {
+		C6233FC52E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanMovie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6233FC62E8511DE0018C2BF /* Debug */,
@@ -550,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6233FCA2E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanArchitectureTests" */ = {
+		C6233FCA2E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanMovieTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6233FCB2E8511DE0018C2BF /* Debug */,
@@ -559,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6233FCD2E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanArchitectureUITests" */ = {
+		C6233FCD2E8511DE0018C2BF /* Build configuration list for PBXNativeTarget "CleanMovieUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6233FCE2E8511DE0018C2BF /* Debug */,
