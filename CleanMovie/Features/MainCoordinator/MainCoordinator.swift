@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class MainCoordinator: CoordinatorProtocol {
-    private var navigationController: UINavigationController
+    private let navigationController: UINavigationController
     private let diContainer: DIContainerProtocol
     
     init(navigationController: UINavigationController, diContainer: DIContainerProtocol) {
@@ -18,12 +18,11 @@ class MainCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        showMainScreen()
+        let movieSearchCoordinator = diContainer.makeMovieSearchCoordinator(navigationController: navigationController)
+        movieSearchCoordinator.start()
     }
     
-    private func showMainScreen() {
-        // TODO: 첫 화면 구현
-        // let mainVC = diContainer.makeMainViewController()
-        // navigationController.setViewControllers([mainVC], animated: false)
+    deinit {
+        print("MainCoordinator deinit")
     }
 }
