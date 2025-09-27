@@ -29,8 +29,8 @@ class MovieDetailViewModel {
         let loadingIndicator = ActivityIndicator()
         let errorTracker = ErrorTracker()
         
+        // startWith(()) 제거 - 명시적 호출만
         let movieDetail = loadTrigger
-            .startWith(()) // 초기 로드
             .flatMapLatest { [movieService, movieId] _ -> Observable<Movie?> in
                 return movieService.getMovieDetail(id: movieId)
                     .trackActivity(loadingIndicator)
@@ -48,6 +48,7 @@ class MovieDetailViewModel {
             .map { $0?.localizedDescription }
     }
     
+    // 명시적 호출 메서드
     func loadMovie() {
         loadTrigger.onNext(())
     }

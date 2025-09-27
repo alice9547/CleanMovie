@@ -98,10 +98,19 @@ class MovieDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         bindViewModel()
+        
+        loadMovieData()
     }
     
     func configure(with viewModel: MovieDetailViewModel) {
         self.viewModel = viewModel
+    }
+    
+    // MARK: - Data Loading
+    private func loadMovieData() {
+        guard let viewModel else { return }
+        
+        viewModel.loadMovie()
     }
     
     private func setupUI() {
@@ -246,7 +255,7 @@ class MovieDetailViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        // Input 바인딩
+        // Input 바인딩 - 재시도 버튼
         retryButton.rx.tap
             .subscribe(onNext: { [weak self] in
                 self?.viewModel.loadMovie()

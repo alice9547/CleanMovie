@@ -9,18 +9,13 @@
 /* Begin PBXBuildFile section */
 		C623405D2E862BC20018C2BF /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = C623405C2E862BC20018C2BF /* Then */; };
 		C623405F2E862C570018C2BF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C623405E2E862C570018C2BF /* SnapKit */; };
-		C62340612E862C570018C2BF /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C62340602E862C570018C2BF /* SnapKit-Dynamic */; };
 		C62340632E862C7D0018C2BF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = C62340622E862C7D0018C2BF /* Moya */; };
 		C62340652E862C7D0018C2BF /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C62340642E862C7D0018C2BF /* ReactiveMoya */; };
 		C62340672E862C7D0018C2BF /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = C62340662E862C7D0018C2BF /* RxMoya */; };
 		C62340692E862CAA0018C2BF /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C62340682E862CAA0018C2BF /* RxBlocking */; };
-		C623406B2E862CAA0018C2BF /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C623406A2E862CAA0018C2BF /* RxBlocking-Dynamic */; };
 		C623406D2E862CAA0018C2BF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = C623406C2E862CAA0018C2BF /* RxCocoa */; };
-		C623406F2E862CAA0018C2BF /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C623406E2E862CAA0018C2BF /* RxCocoa-Dynamic */; };
 		C62340712E862CAA0018C2BF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = C62340702E862CAA0018C2BF /* RxRelay */; };
-		C62340732E862CAA0018C2BF /* RxRelay-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C62340722E862CAA0018C2BF /* RxRelay-Dynamic */; };
 		C62340752E862CAA0018C2BF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C62340742E862CAA0018C2BF /* RxSwift */; };
-		C62340772E862CAA0018C2BF /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C62340762E862CAA0018C2BF /* RxSwift-Dynamic */; };
 		C62340792E862CAA0018C2BF /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = C62340782E862CAA0018C2BF /* RxTest */; };
 		C623407B2E862CAA0018C2BF /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C623407A2E862CAA0018C2BF /* RxTest-Dynamic */; };
 /* End PBXBuildFile section */
@@ -52,7 +47,7 @@
 		C6233FC42E8511DE0018C2BF /* Exceptions for "CleanMovie" folder in "CleanMovie" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Resources/Info.plist,
+				Info.plist,
 			);
 			target = C6233F9B2E8511DB0018C2BF /* CleanMovie */;
 		};
@@ -84,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C62340772E862CAA0018C2BF /* RxSwift-Dynamic in Frameworks */,
 				C623406D2E862CAA0018C2BF /* RxCocoa in Frameworks */,
 				C62340672E862C7D0018C2BF /* RxMoya in Frameworks */,
 				C623405D2E862BC20018C2BF /* Then in Frameworks */,
@@ -92,11 +86,7 @@
 				C62340632E862C7D0018C2BF /* Moya in Frameworks */,
 				C62340652E862C7D0018C2BF /* ReactiveMoya in Frameworks */,
 				C62340752E862CAA0018C2BF /* RxSwift in Frameworks */,
-				C623406F2E862CAA0018C2BF /* RxCocoa-Dynamic in Frameworks */,
-				C62340612E862C570018C2BF /* SnapKit-Dynamic in Frameworks */,
-				C62340732E862CAA0018C2BF /* RxRelay-Dynamic in Frameworks */,
 				C62340692E862CAA0018C2BF /* RxBlocking in Frameworks */,
-				C623406B2E862CAA0018C2BF /* RxBlocking-Dynamic in Frameworks */,
 				C62340712E862CAA0018C2BF /* RxRelay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
