@@ -69,27 +69,6 @@ class MovieDetailViewController: UIViewController {
         $0.textColor = .label
     }
     
-    private let loadingIndicator = UIActivityIndicatorView(style: .large).then {
-        $0.hidesWhenStopped = true
-    }
-    
-    private let errorView = UIView()
-    private let errorLabel = UILabel().then {
-        $0.text = "영화 정보를 불러올 수 없습니다"
-        $0.font = .systemFont(ofSize: 16)
-        $0.textColor = .secondaryLabel
-        $0.textAlignment = .center
-        $0.numberOfLines = 0
-    }
-    
-    private let retryButton = UIButton(type: .system).then {
-        $0.setTitle("다시 시도", for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
-        $0.backgroundColor = .systemBlue
-        $0.setTitleColor(.white, for: .normal)
-        $0.layer.cornerRadius = 8
-    }
-    
     // MARK: - Properties
     private var viewModel: MovieDetailViewModel!
     private let disposeBag = DisposeBag()
@@ -98,7 +77,6 @@ class MovieDetailViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         bindViewModel()
-        
         loadMovieData()
     }
     
@@ -108,8 +86,7 @@ class MovieDetailViewController: UIViewController {
     
     // MARK: - Data Loading
     private func loadMovieData() {
-        guard let viewModel else { return }
-        
+        guard let viewModel = viewModel else { return }
         viewModel.loadMovie()
     }
     
@@ -117,21 +94,15 @@ class MovieDetailViewController: UIViewController {
         view.backgroundColor = .systemBackground
         setupNavigationBar()
         setupLayout()
-        setupErrorView()
     }
     
     private func setupNavigationBar() {
         navigationItem.largeTitleDisplayMode = .never
-        
-        // 뒤로 가기 버튼 스타일링
         navigationController?.navigationBar.tintColor = .label
     }
     
     private func setupLayout() {
         view.addSubview(scrollView)
-        view.addSubview(loadingIndicator)
-        view.addSubview(errorView)
-        
         scrollView.addSubview(contentView)
         
         [posterImageView, titleLabel, ratingLabel, releaseDateLabel,
@@ -192,79 +163,25 @@ class MovieDetailViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.bottom.equalToSuperview().offset(-20)
         }
-        
-        // Loading Indicator
-        loadingIndicator.snp.makeConstraints {
-            $0.center.equalToSuperview()
-        }
-        
-        // Error View
-        errorView.snp.makeConstraints {
-            $0.center.equalToSuperview()
-            $0.leading.trailing.equalToSuperview().inset(40)
-        }
-    }
-    
-    private func setupErrorView() {
-        [errorLabel, retryButton].forEach {
-            errorView.addSubview($0)
-        }
-        
-        errorLabel.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
-        }
-        
-        retryButton.snp.makeConstraints {
-            $0.top.equalTo(errorLabel.snp.bottom).offset(20)
-            $0.centerX.equalToSuperview()
-            $0.width.equalTo(120)
-            $0.height.equalTo(44)
-            $0.bottom.equalToSuperview()
-        }
-        
-        errorView.isHidden = true
     }
     
     private func bindViewModel() {
         guard let viewModel = viewModel else { return }
         
-        // Output 바인딩
+        // 로딩/에러 바인딩 제거, 비즈니스 데이터만 바인딩
         viewModel.movie
             .drive(onNext: { [weak self] movie in
                 self?.configureUI(with: movie)
             })
             .disposed(by: disposeBag)
-        
-        viewModel.isLoading
-            .drive(onNext: { [weak self] isLoading in
-                if isLoading {
-                    self?.showLoading()
-                } else {
-                    self?.hideLoading()
-                }
-            })
-            .disposed(by: disposeBag)
-        
-        viewModel.error
-            .drive(onNext: { [weak self] errorMessage in
-                if let error = errorMessage {
-                    self?.showError(error)
-                } else {
-                    self?.hideError()
-                }
-            })
-            .disposed(by: disposeBag)
-        
-        // Input 바인딩 - 재시도 버튼
-        retryButton.rx.tap
-            .subscribe(onNext: { [weak self] in
-                self?.viewModel.loadMovie()
-            })
-            .disposed(by: disposeBag)
     }
     
     private func configureUI(with movie: Movie?) {
-        guard let movie = movie else { return }
+        guard let movie = movie else {
+            // 데이터가 없을 때의 기본 상태
+            titleLabel.text = "영화 정보를 불러올 수 없습니다"
+            return
+        }
         
         titleLabel.text = movie.title
         ratingLabel.text = "★ \(movie.ratingText)"
@@ -305,28 +222,6 @@ class MovieDetailViewController: UIViewController {
         
         // TODO: 실제 이미지 로딩 구현
         // posterImageView.kf.setImage(with: URL(string: urlString))
-    }
-    
-    private func showLoading() {
-        loadingIndicator.startAnimating()
-        scrollView.isHidden = true
-        errorView.isHidden = true
-    }
-    
-    private func hideLoading() {
-        loadingIndicator.stopAnimating()
-        scrollView.isHidden = false
-    }
-    
-    private func showError(_ message: String) {
-        errorLabel.text = message
-        errorView.isHidden = false
-        scrollView.isHidden = true
-    }
-    
-    private func hideError() {
-        errorView.isHidden = true
-        scrollView.isHidden = false
     }
     
     deinit {

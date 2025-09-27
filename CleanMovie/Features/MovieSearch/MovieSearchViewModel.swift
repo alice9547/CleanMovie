@@ -16,8 +16,6 @@ class MovieSearchViewModel {
     
     // Output
     let movies: Driver<[Movie]>
-    let isLoading: Driver<Bool>
-    let error: Driver<String?>
     
     private let movieService: MovieNetworkServiceProtocol
     private let disposeBag = DisposeBag()
@@ -25,29 +23,17 @@ class MovieSearchViewModel {
     init(movieService: MovieNetworkServiceProtocol) {
         self.movieService = movieService
         
-        let loadingIndicator = ActivityIndicator()
-        let errorTracker = ErrorTracker()
-        
         let searchResult = searchTrigger
             .withLatestFrom(searchQuery)
             .filter { !$0.trimmingCharacters(in: .whitespaces).isEmpty }
-            .flatMapLatest { [weak movieService] query -> Observable<[Movie]> in
-                guard let movieService = movieService else { return Observable.empty() }
-                
+            .flatMapLatest { [movieService] query -> Observable<[Movie]> in
                 return movieService.searchMovies(query: query, page: 1)
-                    .trackActivity(loadingIndicator)
-                    .trackError(errorTracker)
-                    .catchErrorJustReturn([])
+                    .catchAndReturn([]) // 에러는 네트워크에서 처리됨
             }
         
         self.movies = searchResult
             .startWith([])
             .asDriver(onErrorJustReturn: [])
-        
-        self.isLoading = loadingIndicator.asDriver()
-        
-        self.error = errorTracker.asDriver()
-            .map { $0?.localizedDescription }
     }
     
     func updateSearchQuery(_ query: String) {

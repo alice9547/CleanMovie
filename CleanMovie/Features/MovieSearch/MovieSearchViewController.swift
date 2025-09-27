@@ -140,19 +140,7 @@ class MovieSearchViewController: UIViewController {
                 cell.configure(with: movie)
             }
             .disposed(by: disposeBag)
-        
-        viewModel.isLoading
-            .drive(onNext: { [weak self] isLoading in
-                self?.handleLoadingState(isLoading)
-            })
-            .disposed(by: disposeBag)
-        
-        viewModel.error
-            .drive(onNext: { [weak self] errorMessage in
-                self?.handleError(errorMessage)
-            })
-            .disposed(by: disposeBag)
-        
+
         // Input 바인딩
         searchBar.rx.text.orEmpty
             .debounce(.milliseconds(300), scheduler: MainScheduler.instance) // 입력 지연으로 API 호출 최적화
